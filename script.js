@@ -1,5 +1,4 @@
 let time = 0;
-let board = [];
 const boardLen = 15, HUNDRED = 100;
 let linePlane = boardLen - 1, colPlane = linePlane / 2;
 const randomNoOfObjects = Math.floor(Math.random() * boardLen + 1);
@@ -7,17 +6,6 @@ let colObject = [], lineObj = 0;
 for (let i = 1; i <= randomNoOfObjects; ++i) {
     colObject[i] = Math.floor(Math.random() * boardLen);
     console.log("obiectele random sunt: " + colObject[i]);
-}
-
-createFlyingSpace();
-
-function createFlyingSpace() {
-    for (let i = 0; i < boardLen; ++i) {
-        board[i] = [];
-        for (let j = 0; j < boardLen; ++j) {
-            board[i][j] = (i + 1) * HUNDRED + j + 1;
-        }
-    }
 }
 
 generateButtons();
